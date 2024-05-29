@@ -134,14 +134,14 @@ namespace Insectgame
     {
         // Attributes
         public bool Reproduction { get; set; }
-        public bool RoyalCry { get; set; }
+        public bool Royal_Cry { get; set; }
 
         // Methods
         public bool SelfReproductionFunction() => Reproduction;
 
-        public void RoyalCryFunctionality()
+        public void Royal_CryFunctionality()
         {
-            if (RoyalCry)
+            if (Royal_Cry)
             {
                 Feeling += 20;
             }

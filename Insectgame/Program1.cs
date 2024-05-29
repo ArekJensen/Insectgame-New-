@@ -24,10 +24,9 @@ namespace Insectgame
                 ThornyLegs = true
             };
             loneInsect.SetSenses(50, 50, 50, 50);
-            loneInsect.SetDamage(25, 75);
-
-            Console.WriteLine("Lone Insect HP Regen: " + loneInsect.SootheRegen(true));
+            loneInsect.SetDamage(35, 60);
             loneInsect.ThornyLegsFunctionality();
+            
             Console.WriteLine("Lone Insect Size after Thorny Legs Functionality: " + loneInsect.Size);
             Console.WriteLine("Lone Insect Senses: " + loneInsect.Senses);
             Console.WriteLine("Lone Insect Damage: " + loneInsect.Damage);
@@ -38,7 +37,7 @@ namespace Insectgame
             Console.WriteLine("Lone Insect Exoskeleton: " + loneInsect.Exoskeleton);
             Console.WriteLine("Lone Insect Mandibles: " + loneInsect.Mandibles);
             Console.WriteLine("Lone Insect ThornyLegs: " + loneInsect.ThornyLegs);
-            Console.WriteLine("Hitpoints regenerated to " + loneInsect.Hitpoints);
+            //Console.WriteLine("Hitpoints regenerated to " + loneInsect.Hitpoints);
 
             Queen queen = new Queen
             {
@@ -49,12 +48,12 @@ namespace Insectgame
                 Exoskeleton = true,
                 Mandibles = true,
                 Reproduction = true,
-                RoyalCry = true
+                Royal_Cry = true
             };
             queen.SetSenses(50, 50, 50, 50);
             queen.SetDamage(25, 50);
-
-            queen.RoyalCryFunctionality();
+            queen.Royal_CryFunctionality();
+            
             Console.WriteLine("queen Size after Royal Cry Functionality: " + queen.Size);
             Console.WriteLine("queen Senses: " + queen.Senses);
             Console.WriteLine("queen Damage: " + queen.Damage);
@@ -64,8 +63,8 @@ namespace Insectgame
             Console.WriteLine("queen Mobility: " + queen.Mobility);
             Console.WriteLine("queen Exoskeleton: " + queen.Exoskeleton);
             Console.WriteLine("queen Mandibles: " + queen.Mandibles);
-            Console.WriteLine("queen HpRegen: " + queen.Reproduction);
-            Console.WriteLine("queen ThornyLegs: " + queen.RoyalCry);
+            Console.WriteLine("queen Reproduction: " + queen.Reproduction);
+            Console.WriteLine("queen RoyalCry: " + queen.Royal_Cry);
         }
     }
 }
