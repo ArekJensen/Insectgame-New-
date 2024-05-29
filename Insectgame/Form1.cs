@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace Insectgame
@@ -74,19 +75,48 @@ namespace Insectgame
     public class LoneInsect : Insect
     {
         // Attributes
-        public bool HpRegen { get; set; }
+        public bool Hp_Regen { get; set; }
         public bool ThornyLegs { get; set; }
+        private System.Timers.Timer regenTimer;
 
         // Methods
-        public bool SootheRegen(bool time)
+        public bool SootheRegen(bool enable)
         {
-            if (time)
+            Hp_Regen = enable;
+            if (Hp_Regen)
             {
-                HpRegen = true;
+                StartHealthRegeneration();
                 return true;
+            }
+            else
+            {
+                StopHealthRegeneration();
             }
             return false;
         }
+
+        private void StartHealthRegeneration()
+        {
+            regenTimer = new System.Timers.Timer(1000); // Set timer interval to 1 second (1000 ms)
+            regenTimer.Elapsed += RegenerateHealth;
+            regenTimer.AutoReset = true; // Make it repeatable
+            regenTimer.Enabled = true; // Start the timer
+        }
+
+        private void StopHealthRegeneration()
+        {
+            if (regenTimer != null)
+            {
+                regenTimer.Stop();
+                regenTimer.Dispose();
+            }
+        }
+
+        private void RegenerateHealth(object sender, ElapsedEventArgs e)
+        {
+            Hitpoints += 5;
+        }
+
 
         public void ThornyLegsFunctionality()
         {

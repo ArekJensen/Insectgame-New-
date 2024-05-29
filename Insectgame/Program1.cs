@@ -14,17 +14,17 @@ namespace Insectgame
             // Example usage
             LoneInsect loneInsect = new LoneInsect
             {
-                Size = 100,
-                Hitpoints = 100,
-                Resistance = 30,
-                Mobility = 20,
+                Size = 300,
+                Hitpoints = 750,
+                Resistance = 200,
+                Mobility = 120,
                 Exoskeleton = true,
                 Mandibles = true,
-                HpRegen = true,
+                Hp_Regen = true,
                 ThornyLegs = true
             };
-            loneInsect.SetSenses(10, 10, 10, 20);
-            loneInsect.SetDamage(15, 10);
+            loneInsect.SetSenses(50, 50, 50, 50);
+            loneInsect.SetDamage(25, 75);
 
             Console.WriteLine("Lone Insect HP Regen: " + loneInsect.SootheRegen(true));
             loneInsect.ThornyLegsFunctionality();
@@ -37,35 +37,35 @@ namespace Insectgame
             Console.WriteLine("Lone Insect Mobility: " + loneInsect.Mobility);
             Console.WriteLine("Lone Insect Exoskeleton: " + loneInsect.Exoskeleton);
             Console.WriteLine("Lone Insect Mandibles: " + loneInsect.Mandibles);
-            Console.WriteLine("Lone Insect HpRegen: " + loneInsect.HpRegen);
             Console.WriteLine("Lone Insect ThornyLegs: " + loneInsect.ThornyLegs);
+            Console.WriteLine("Hitpoints regenerated to " + loneInsect.Hitpoints);
 
             Queen queen = new Queen
             {
-                Size = 20,
-                Hitpoints = 200,
-                Resistance = 60,
-                Mobility = 40,
+                Size = 150,
+                Hitpoints = 800,
+                Resistance = 200,
+                Mobility = 100,
                 Exoskeleton = true,
                 Mandibles = true,
                 Reproduction = true,
                 RoyalCry = true
             };
-            queen.SetSenses(25, 25, 25, 25);
-            queen.SetDamage(30, 20);
+            queen.SetSenses(50, 50, 50, 50);
+            queen.SetDamage(25, 50);
 
             queen.RoyalCryFunctionality();
-            Console.WriteLine("Queen Size after Royal Cry Functionality: " + queen.Size);
-            Console.WriteLine("Queen Senses: " + queen.Senses);
-            Console.WriteLine("Queen Damage: " + queen.Damage);
-            Console.WriteLine("Lone Insect Size: " + queen.Size);
-            Console.WriteLine("Lone Insect Hitpoint: " + queen.Hitpoints);
-            Console.WriteLine("Lone Insect Resistance: " + queen.Resistance);
-            Console.WriteLine("Lone Insect Mobility: " + queen.Mobility);
-            Console.WriteLine("Lone Insect Exoskeleton: " + queen.Exoskeleton);
-            Console.WriteLine("Lone Insect Mandibles: " + queen.Mandibles);
-            Console.WriteLine("Lone Insect HpRegen: " + queen.Reproduction);
-            Console.WriteLine("Lone Insect ThornyLegs: " + queen.RoyalCry);
+            Console.WriteLine("queen Size after Royal Cry Functionality: " + queen.Size);
+            Console.WriteLine("queen Senses: " + queen.Senses);
+            Console.WriteLine("queen Damage: " + queen.Damage);
+            Console.WriteLine("queen Size: " + queen.Size);
+            Console.WriteLine("queen Hitpoint: " + queen.Hitpoints);
+            Console.WriteLine("queen Resistance: " + queen.Resistance);
+            Console.WriteLine("queen Mobility: " + queen.Mobility);
+            Console.WriteLine("queen Exoskeleton: " + queen.Exoskeleton);
+            Console.WriteLine("queen Mandibles: " + queen.Mandibles);
+            Console.WriteLine("queen HpRegen: " + queen.Reproduction);
+            Console.WriteLine("queen ThornyLegs: " + queen.RoyalCry);
         }
     }
 }
